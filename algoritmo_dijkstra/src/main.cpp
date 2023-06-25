@@ -9,6 +9,11 @@ int main() {
         cin >> vertice >> aresta >> peso;
         grafo[vertice].push_back({aresta, peso});
     }
+    auto start = std::chrono::high_resolution_clock::now();
     dijkstraAlg(grafo, tam, no);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    double seconds = duration.count();
+    std::cout << "Tempo de execução: " << seconds << " segundos" << std::endl;
     return 0;
 }

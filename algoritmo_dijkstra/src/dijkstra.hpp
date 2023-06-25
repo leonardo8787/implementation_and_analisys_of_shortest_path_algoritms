@@ -1,10 +1,7 @@
 #ifndef DIJKSTRA_HPP
 #define DIJKSTRA_HPP
 
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <utility>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Compare {
