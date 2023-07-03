@@ -3,7 +3,7 @@
 void dijkstraAlg(const vector<vector<pair<int, int>>>& grafo, int tam, int quantidade) {
     vector<int> caminho;
     vector<int> distancias(tam, INT_MAX);
-    priority_queue<pair<int, int>, vector<pair<int, int>>, CompareD> fila;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> fila;
 
     distancias[quantidade] = 0;
     fila.push({quantidade, 0});
@@ -28,12 +28,12 @@ void dijkstraAlg(const vector<vector<pair<int, int>>>& grafo, int tam, int quant
         }
     }
 
-    // for (int i = 1; i <= quantidade; i++) {
-    //     int aux=distancias[i];
-    //     if(i==1)
-    //         aux=0;
-    //     else if(aux==INT_MAX or aux==0) aux=-1;
-    //     cout<<"->"<<aux;
-    // }
+    for (int i = 1; i <= quantidade; i++) {
+        int aux=distancias[i];
+        if(i==1)
+            aux=0;
+        else if(aux==INT_MAX or aux==0) aux=-1;
+        cout<<"->"<<aux;
+    }
 }
 

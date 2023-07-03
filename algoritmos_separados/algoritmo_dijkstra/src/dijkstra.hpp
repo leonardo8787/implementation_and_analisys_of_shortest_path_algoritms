@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct CompareD {
+struct Compare {
     bool operator()(const std::pair<int, int>& a, const std::pair<int, int>& b) {
         return a.second > b.second;
     }
